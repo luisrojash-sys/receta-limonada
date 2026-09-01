@@ -1,0 +1,9 @@
+name: Comprobar receta
+on: [push]
+jobs:
+  pagina:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Existe README
+        run: test -f README.md
